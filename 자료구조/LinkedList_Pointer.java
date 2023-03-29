@@ -13,7 +13,7 @@ class ListNode {
     }
 }
 
-public class FirstList {
+public class LinkedList_Pointer {
     public static void main(String[] args) {
 
         ListNode list1; // 참조변수. ListNode에서 찍어낸 빵의 주소를 저장
