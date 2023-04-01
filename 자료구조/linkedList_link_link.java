@@ -11,7 +11,6 @@ class Node {
 
 public class linkedList_link_link {
     public static void main(String[] args) {
-        System.out.println("gg");
 
         // 첫번째 원소를 생성
 
