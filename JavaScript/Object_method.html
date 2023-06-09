@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 객체의 복사 Object.assign()
+    const user = {
+        name : 'Mike',
+        age : 30
+    }
+
+    const user_clone_true = Object.assign({},user);
+    const user_clone_false = user;
+    user_clone_false.name = "Pink"
+    console.log(user_clone_false)
+    //  user_clone_false 자바에서의 얕은 복사가 일어남 
+    // 결국 갹체의 참조 주소값만 가져온다
+    console.log(user_clone_true)
+    // user_clone_true  -   Object.assign()메소드를 활용하여
+    //깊은 복사가 일어나서 원래의 객체의 데이터가 변경되어도 상괸없다.
+    const user_clone_true2 = Object.assign({gender :' male'},user_clone_true)
+    //만약 assign({})안에 값이 있다면 그값포함객체가 생긴다
+
+    console.log(user_clone_true2)
+
+
+    // 프로퍼티선언을 이러한 형식으로도 가능하다.
+    let t = "title";
+    let p = "pice";
+
+    const buy = {
+        [t] : "사과",
+        [p] : 3000,
+        [1+4] : 5,
+        
+    }
+    console.log("keys")
+    const result = Object.keys(user);
+    console.log(result)
+    console.log("entries")
+    const result1 = Object.entries(user);
+    console.log(result1);
+    const result2 = Object.fromEntries(result1);
+    console.log(result2);
+    // console.log(buy)
+
+    function makeObj(key,val){
+        return {
+            [key] : val,
+        };
+    }
+    const Obj = makeObj("나이" , 33 );
+    console.log(Obj);
+    
+
+
+    //객체의 값 배열 반환 Object.values()
+    
+</script>
+</html>

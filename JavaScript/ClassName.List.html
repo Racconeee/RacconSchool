@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Cities</h1>
+    <ul>
+    <li id="one" class="red">hallym</li>
+    <li id="two" class="red">software</li>
+    <li id="three" class="red">big data</li>
+    <li id="four">IoT</li>
+    </ul>
+    </div>
+
+    <script>
+
+        //querySelectorAll을 통해서 class 이름이 red인 요소들을 모두선택하고 elems안에 저장한다.
+        //elems안에는 class name  -> red 이 있지만 배열형태로 있으니 ...을 붙여서 호출한다.
+        //이후에는 className을 활용헤서 클래스 이름을 변경시켜 준다.
+        window.onload = function(){
+            const elems = document.querySelectorAll(".red");
+
+            [...elems].forEach(elem =>{
+                    elem.className = "blue";
+                    elem.classList.toggle('blue')
+            });
+
+            console.log(...elems);
+            const bg_blue = document.getElementsByClassName("blue")
+            for(let i=0; i<bg_blue.length;i++){
+                bg_blue[i].style.background = "blue";
+            }
+
+            const heading = document.querySelector("h1");
+
+            heading.id ="new_id"
+            console.log(heading.getAttribute("id"))
+
+        }
+
+    </script>
+</body>
+</html>

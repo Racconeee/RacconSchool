@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // user에 대한 내용을 prompt로 받아와서 game 안에 있는 함수를 활용해서 
+    // 각 자리마다 3의 배수가 더 많이 나오는 사람이 이기는 프로그램
+    // for()문을 선언하는게 새로운거같다
+    // document.write("작성") 웹에 내용을 작성 할 수 있다.
+    const game = (user) =>{
+        let cnt =0;
+        let rnd = parseInt(Math.random() * 900000) +100000;
+        document.write(` ${user} 사용자 <br> 생성된 난수 : ${rnd}<br>`);
+        for(; rnd > 0 ; rnd = parseInt(rnd/10)){
+            let mo = rnd % 10;
+            if(mo % 3 == 0 % mo !=0){
+                document.write(`박수짝 ${++cnt}<br>`);
+            }
+        }
+        document.write(`박수 개수 : ${cnt} <br><br>`)
+        return cnt;
+    }
+    
+    let user1 = prompt("사용자1");
+    let user2 = prompt("사용자2");
+
+    let cnt1 = game(user1);
+    let cnt2 = game(user2);
+
+    if(cnt1 == cnt2){
+        document.write(`비겼습니다.`);
+    }
+    else if(cnt1 > cnt2){
+        document.write(`${user1} 사용자가 이겼습니다.`);
+    }else{
+        document.write(`${user2} 가 이겼습니다.`);
+    }
+    
+
+</script>
+</html>

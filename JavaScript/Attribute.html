@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" id="user" value="hallym">
+    <script>
+        //hasAttribute(attribute) attribute에 대한 값이 있는지
+        //setAttribute(attribute, value)  attribute을 value값으로 변경해라 setAttribute는 값을 변경과 대입도 가능함
+        //removeAttribute(attribute) 속성제거 attribute값을 제거함 
+        //getAttribute(attribute) 속성추출 attribute에 대한 값을 반환시킴 
+    const {attributes} = document.getElementById('user');
+    console.log(attributes.id.value);
+    console.log(attributes.type.value);
+    console.log(attributes.value.value);
+    console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+    const $input = document.getElementById('user');
+    console.log($input)
+    $input.setAttribute('value', 'software');
+    console.log($input.getAttribute('value'));
+    $input.removeAttribute('value');
+    console.log($input.hasAttribute('value'));
+    $input.setAttribute('na2me' , 'kiki');
+    console.log($input.getAttribute('na2me'));
+
+    </script>
+    </body>
+</html>

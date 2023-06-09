@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //클로저에 대한 예제
+
+    const total = function(){
+        let result =0;
+        let cnt = 0;
+        console.log(`${cnt} : ${result}`);
+        const add = (value) =>{
+            cnt++;
+            if(cnt % 2 == 0){
+                value *= -1
+            }
+            console.log(`${cnt} : ${value}`);
+            result += value;
+            return result;
+        } 
+        return add;
+    }
+
+    const cfunc = total();
+
+
+    for (let i = 1; i < 6; i++) {
+        let rnd = parseInt(Math.random() * 100) + 1;
+        console.log(`result => ${cfunc(rnd)}`)
+    }
+
+</script>
+</html>

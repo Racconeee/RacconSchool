@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /*
+        function (매개변수){
+            return 
+        }
+        힘수 선언 이러한 모습의 형식 
+    */ 
+    function makeObject(name, age){
+        return{
+            name,
+            age,
+            hobby : " football"
+        };
+    }
+    const Mike = makeObject("Mike",30);
+    Mike.hobby = "baseball";
+    console.log(Mike)
+    //변수 의 값을 넣거나 접근할때는 객체명.변수 로 접근가능하다 
+
+
+    console.log('age' in Mike)
+    console.log('ege' in Mike)
+
+    //( "--" in 객체명 ) in을 사용해서 객체 안에 변수가 있나없나 을 확일 할 수 있다.
+
+    function isAdult(user){
+        if(!('age' in user) || user.age < 20){
+            return false;
+        } else{
+            return true
+        }
+    }
+    //user.age<20만 입력하면 undefined같은 경우는 true가 출력되게 되는데
+    //!(age in user)을 사용하면 user객체 안에 age란 변수명이 없을때를 사용해서 false를 출력하게 만들어준다.
+    let user1 = {
+        age : 23,
+        name : "jon"
+    }
+    let user2 = {
+        name : "kim"
+    }
+    console.log(user1);
+    console.log(isAdult(user1));
+    console.log(user2);
+    console.log(user2.age); 
+    //age에 대한 값이 없으므로 undefined가 출력된다.
+    console.log(isAdult(user2));
+
+    const james = {
+        name : "james",
+        age : 30
+    };
+
+    console.log(james.age);
+
+    for(x in james){
+        console.log(x)
+    }
+    //for-each문으로 Mike안에 있는 변수의 값을 출력 할 수 있다
+    //민약 내가 Mike에 대한 변수 값을 출력하고 싶다면 Mike[x]를 
+    //내가 Mike가 가지고 있는 변수명을 출력하고 싶다면 그냥 x를 출력하게 되면 된다.
+</script>
+</html>

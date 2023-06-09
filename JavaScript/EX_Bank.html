@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Account{
+        constructor(people,wallet,tel){
+            this.people = people;
+            this.wallet = wallet;
+            this.tel = tel;
+        }
+        get getpeople(){
+            return this.people;
+        }
+        get gettel(){
+            return this.tel;
+        }
+        deposit(money){
+            this.wallet += money;
+        }
+        withdraw(money){
+            if(wallet< money){
+                return 잔액부족;
+            }
+            this.wallet -= money;
+        }
+        display(){
+            document.write(`예금주 : ${this.people}`);
+            document.write(`연락처 : ${this.gettel}`);
+            document.write(`현재 잔액 : ${this.wallet}`);
+        }
+
+    }
+
+    let acc1 = new Account('스크립트', 50000, '010-8765-1386');
+    document.write(`현재 상태 입니다 <br>`)
+    acc1.display();
+    document.write(`<br>50000 예금 후 상태 입니다 <br>`)
+    acc1.deposit(50000);
+    acc1.display();
+    document.write(`<br>1000000을 인출하려고 합니다<br>`)
+    acc1.withdraw(1000000);
+    document.write(`<br>변경 전 연락처 ${acc1.Tel}`);
+    acc1.Tel='010-3456-9743';
+    document.write(`<br>변경 후 연락처 ${acc1.Tel}`);
+</script>
+</html>

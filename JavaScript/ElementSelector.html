@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li id="1" class="odd">1</li>
+        <li id="2">2</li>
+        <li id="3">3</li>
+        <li id="4">4</li>
+        <li id="five" class="odd">23</li>
+    </ul>
+    
+    <script>
+
+        
+            const all = document.getElementsByTagName('li');
+            for(let i=0;i<all.length;i++){
+                all[i].style.background = 'green';
+                
+            }
+            
+            const odd = document.getElementsByClassName("odd");
+            for(let i=0; i<odd.length;i++){
+                odd[i].style.background = "black";
+                
+            }
+
+            console.log("hello")
+            const first = document.getElementById(3);
+            first.style.background = "blue";
+
+            const all_2 = document.querySelectorAll("li");
+            all_2.forEach(value => value.style.background = "red")
+        
+            const name1 = document.querySelector("#five")
+            name1.textContent = `<h1>hello</h1>`;
+            console.log(name1.textContent)
+        </script>
+</body>
+</html>

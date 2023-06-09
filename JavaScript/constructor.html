@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        /*
+        class cow{ 
+            String color
+            public cow(String color){
+                this.color = color
+            }
+            
+            int
+            float
+            
+            method
+            꼬리없음 
+            method
+            검은색 
+            method
+        }
+        
+        main
+        
+        cow user = new cow(검은색);
+        
+        
+        */
+       let user1 = new User("국진",24);
+       let user2 = new User("재희",34);
+       let user3 = new User("진서",44);
+
+       
+       function User(name,age){
+           //this = {}; 빈객체가 암시적으로 만들어짐
+           this.name = name;
+           this.age = age;
+           this.sayName = function(){
+               console.log(this.name);
+               console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+               return "최진건";
+            }
+            //return this; (this가 암시적으로 반환됨)
+        }
+        //성상자 함수로 객체를 생성할때는 new 키워드와 생성자의 이름은 첫글자가 대문자이다.
+        //위에서 사용하는 this는 이번 코드의 예제에서는 user1,2,3을 가르킨다.
+        
+    console.log(user1,user2,user3)
+    console.log(user1.sayName())
+    console.log(user2.sayName())
+    user3.sayName()
+
+    let user4 = new User("성진",3);
+    console.log(user4)
+
+    console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+
+    function Item( title, price){
+        this.title =title;
+        this.price = price;
+        this.buy = function(){
+            console.log("구입했습니다",title,price);
+        }
+    }
+    let market_user1 = new Item("사과",3000);
+
+    console.log(market_user1)
+    console.log(market_user1.buy)
+    market_user1.buy()
+
+
+
+    console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+
+    let arr = [1,2,3,4,5]
+    let arr2 =[6,7,8,9,10]
+
+    arr.push(...arr2)
+
+    console.log(arr)
+</script>
+</html>

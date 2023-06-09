@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Cities</h1>
+    <ul>
+    <li id="one" class="red">hallym</li>
+    <li id="two" class="red">software</li>
+    <li id="three" class="red">big data</li>
+    <li id="four">IoT</li>
+    </ul>
+    </div>
+    <script>
+    const newElem = document.createElement('li'); // 태그 이름을 인자로 전달하여 요소를 생성
+    const newText = document.createTextNode('Beijing'); // 텍스트 노드를 생성
+
+    newElem.appendChild(newText); // 텍스트 노드를 newElem 자식으로 DOM 트리에 추가
+    
+    const container = document.querySelector('ul');
+    // newElem을 container의 자식으로 DOM 트리에 추가. 마지막 요소로 추가된다.
+    container.appendChild(newElem);
+
+    let newElem_2 = document.createElement("h1")
+    let newText_2 = document.createTextNode("글씨가 진짜 크네")
+    
+    newElem_2.appendChild(newText_2);
+    container.appendChild(newElem_2);
+
+
+    const removeElem = document.getElementById('one');
+    container.removeChild(removeElem); // container의 자식인 removeElem 요소를 DOM 트리에서 제거
+    </script>
+    </body>
+
+</html>

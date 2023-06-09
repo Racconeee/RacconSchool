@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const car ={
+        my_car : 'vision',
+        car_num : '40마 3456',
+        drive : 1000,
+        addDistance : (drive)=>{
+            car.drive += drive;
+        },
+        toString : () => {
+            return `차량번호의 ${car.car_num}의 주행거리는 ${car.drive}입니다.`;
+        },
+        fullCar : (newMycar, newCarnumber) => {
+            car.my_car = newMycar;
+            car.car_num = newCarnumber;
+        }
+    };
+
+    document.write(`소유자 ${car.my_car} 차량번호 ${car.car_num}   주행거리${car.drive}<br>`)
+    
+    document.write(`차량번호 : ${car.car_num} 주행거리를 30 추가<br>`)
+    car.addDistance(30)
+    
+    document.write(`소유자 ${car.my_car} 차량번호 ${car.car_num}   주행거리${car.drive}<br>`)
+    
+    document.write(`car객체의 소유자와 차량번호를 모두 변경합니다<br>`)
+
+    car.addDistance(81)
+    car.toString();
+    car.fullCar("원숭이", "1234다")
+    document.write(`소유자 ${car.my_car} 차량번호 ${car.car_num}   주행거리${car.drive}<br>`)
+</script>
+</html>
