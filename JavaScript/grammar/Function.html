@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Point 화살표함수는 항상 const,let으로 선언하고
+        //일반함수는 function으로 선언하여 사용하지만 const,let으로 사용이 가능하다.
+
+        /* 
+        화살표함수 : function키워드를 사용하여 선언할수없다
+        const,let을 활용해서 변수에 할당해야하고 화살표함수는 항상 익명이며 별도의 함수 이름은 가지고 있지않는다.
+        간결하게 사용할때 일반적으로 사용되고 this키워드의 암시적 반환 및 어휘 범위 지정을 허용한다.
+        명명된 함수를 선언하거나 많은양의 코드를 사용할때는 일반함수를 사용하자
+        */
+        const arrowFunction =() =>{
+            //내용 입력
+        }
+
+    
+        /*
+        일반함수 : 이름을 지정할수 있고 자체 범위 내에서 또는 재귀를 위해 이름으로 함수를 참조할수있다.
+        new키워드를 사용하여 생성자로 사용할수 있다.
+        */
+        function regularFunction (){
+            //내용 입력
+        }
+
+        let genericFunction = function() {
+        // Function body
+        };
+        //이처럼 사용이 가능하다.
+
+    </script>
+</body>
+</html>
