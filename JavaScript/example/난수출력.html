@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function higher_function(){
+            for(let i =0; i<3; i++){
+
+                console.log(`callback function -  ${i} inedex `);
+                
+                console.log(`이번 콜백함수의 max 값은 : `,callback())
+            }
+        }
+
+        const callback = () => {
+            let max =0;
+            for(let i = 0; i<5; i++){
+                let num = Math.floor(Math.random()*100+1);
+                console.log(`callback start(${i}) : ${num}`);
+                if(max < num){
+                    max =num;
+                }
+            }
+            return max
+
+        }
+
+        higher_function(callback);
+
+    </script>
+</body>
+</html>
