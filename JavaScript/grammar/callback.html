@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        콜백함수 : 다른 함수에 인수로 전달되어 특정 작업을 수행하기에 위해 해당 함수에 의해 호출되는 함수
+        고차함수 실행 중 특정 시점에 실행될 동작이나 동작을 제공하는 역할을 수행한다.
+        코드를 모듈화하고 재사용이 가능해서 코드를 유연하게만든다.
+        고차함수와 다르게 함수를 return하지는 않는다. 
+        대표적인 특징으로
+        1.인수로 함수전달 : 함수를 고차함수에 전달해서 고차함수에서 다른 함수를 사용할수 있게 만들어준다.
+        2.비동기 작업 : 작업이 완료되기를 기다리는 동안 콜백 함수가 비동기 함수에 전달되어서 결과를 처리하거나 추가 작업을 수행한다.
+        3.이벤트 처리 : 대표적으로 이벤트리스너를 추가할 때 버튼을 클릭할 때 호출되는 콜백 함수를 제공한다.
+        4. 제어흐름 : 제어흐름을 다른 함수로 전달
+        5.컨텍스트 및 매개변수 : 콜백함수는 함수의 컨텍스트(this)에 엑세스할수 있다.
+       
+        화살표 함수 일반함수 모두 선언이 가능하다.
+        */
+
+
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        function callbackFunction() { //콜백함수
+        console.log("Main callback");
+        }
+
+        
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        
+        function callbackFunction1() {
+            console.log("first callback");
+        }
+        
+        const callbackFunction2 = () => {
+            console.log("second callback");
+        };
+        
+        
+        function doSomething(callback,callback1,callback2) { // 고차함수 doSomething에서 callback(콜백함수)를 매개변수로 받아서 실행시킨다. 
+            console.log(1)
+            callback(); // callbackFunction()함수를 호출한다.
+            console.log(2)
+            callback1();
+            callback2();
+            //당연하겠지만 1,2 사이에 callback함수가 호출된다.
+        }
+        
+        
+        doSomething(callbackFunction,callbackFunction1,callbackFunction2);
+    </script>
+</body>
+</html>
