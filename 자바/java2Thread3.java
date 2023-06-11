@@ -6,6 +6,7 @@
  * 이를 해결하기 위해서는 두개의 스레드중 하나의 스레드만 들어갈 수 있게 임계구역을 설정해주어야하는데
  * 이 임계구역을 설정해주는 방법은 메소드안에 선언, 메소드 전체선언 2가지의 방법이 있다.
  * 수정된 코드의 경우에는 메소드 전체에 임계구역을 설정해주어서 한번에 하나의 스레드만 접근 가능하게 설정하엿다.
+ * synchronized 사용해서 임계구역 설정
  */
 
 public class java2Thread3{
@@ -23,7 +24,7 @@ class Account {
         return balance;
     }
 
-    public void withdraw(int money){
+    public synchronized void withdraw(int money){
         if(balance >= money){
             try {
                 Thread.sleep(1000);

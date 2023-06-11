@@ -10,6 +10,8 @@
  * 두 프로그램이 종료되면 마지막에 소요시간을 출력하게 된다.
  */
 
+
+
 public class java2Thread1 {
     public static void main(String[] args) {
         

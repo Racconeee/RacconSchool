@@ -19,12 +19,10 @@ class Account {
         while(balance < money){
             try {
                 Thread.sleep(1000);
-                System.out.println("Asd");
                 wait();
             } catch (InterruptedException e) {
 
             }
-            System.out.println("1번 일어났다");
             balance -= money;
         }
     }
@@ -37,7 +35,6 @@ class Account {
             } catch (InterruptedException e) {
                 
             }
-            System.out.println("1번 일어났다");
             balance -= money;
         }
     }
