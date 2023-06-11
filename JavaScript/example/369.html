@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //내가만든 
+        let user1 = prompt("사용자1")
+        let user2 = prompt("사용자2")
+
+        console.log(2%3);
+        function user_game(user){
+            let rnd = Math.floor(Math.random() * 90000 + 10000)
+            let index=0;
+            document.write(`${user} 사용자<br>`)
+            document.write(`${rnd} <br>`)
+            
+            for( ; rnd>0;  rnd = parseInt(rnd/10)){
+                let mo = rnd %10;
+                if(mo % 3 == 0 % mo != 0 ){
+                    document.write(`박수 짝 ${++index}<br>`);
+                }
+            }
+            return index;
+
+        }
+
+
+        let user1_game = user_game(user1);
+        let user2_game = user_game(user2);
+
+        if(user1_game == user2_game){
+            document.write(`비겼습니다.`)
+        }else if(user1_game > user2_game){
+            document.write(`${user1} 사용자가 이겼습니다.`)
+        }else{
+            document.write(`${user2} 사용자가 이겼습니다.`)
+        }
+    </script>
+</body>
+</html>
