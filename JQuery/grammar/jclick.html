@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=2, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<>
+
+<h3 id="t1"> 자바스크립트 프로그래밍 </h3><hr>
+<button id="btn1"> 내용변경 </button>
+<button id="btn2"> 스타일변경 </button>
+<input name="tt" type="text">
+<button id="btn3"></button>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+        let flag = true;
+        $('#btn1').click(function(){
+            console.log(flag)
+            if(flag == true){
+                $('#t1').html("jQuery programming")
+                $("#btn1").html("내용이 변경된 상태")
+                flag = false
+            }else{
+                $('#t1').html("js programming")
+                $("#btn1").html("초기의 내용입니다.")
+                flag = true;
+            }
+        });
+        
+        $('#btn2').click(function(){
+            console.log(flag)
+            $('#t1').css("color","yellow")
+        });
+        
+        $("#btn3").css({"width":"100px","height":"100px"})
+        
+        $("#btn3").click(function(){
+            $('input[type="text"]').val("");
+        })
+        </script>
+</body>
+</html>
