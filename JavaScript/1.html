@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cities</h1>
+    <ul>
+    <li class="red">hallym</li>
+    <li class="blue">software</li>
+    <li class="red">big data</li>
+    <li class="green">IoT</li>
+    <li class="red">contentIT</li>
+    </ul>
+    <script>
+        const class_red = document.getElementsByTagName("li")
+        
+        for(let value of class_red){
+            if(value.className == "red"){
+                value.style.color = "green"
+            }else{
+                value.style.color = "blue"
+            }
+        }
+    </script>
+</body>
+</html>

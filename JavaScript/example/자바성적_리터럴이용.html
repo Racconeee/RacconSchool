@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let person = () =>{
+            let user = prompt("이름을 입력하세요")
+            let score = prompt("자바 성적을 입력하세요")
+            
+            return { user, score}
+        };
+
+        let grade = ({score}) =>{
+            if (score >= 90) {
+            return "A";
+            } else if (score >= 80) {
+            return "B";
+            } else if (score >= 70) {
+            return "C";
+            } else if (score >= 60) {
+            return "D";
+            } else {
+            return "F";
+            }
+        };
+        
+
+        const std = person();
+        //{user,score}
+        
+        for(let key in std){
+        console.log(`${key} : ${std[key]}`);
+        }
+
+
+        const gradeJava = grade(std);
+        console.log(`${std.user} 학생의 java 성적은 ${gradeJava} 입니다`);
+        
+    </script>
+</body>
+</html>
