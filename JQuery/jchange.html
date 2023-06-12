@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p { margin: 20px 0 0; }
+        strong { color: blue; }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script>
+            //change 사용자가 값을 변경하는 것을 감지하고 응답한다.
+        $(function () {
+        $("input#check1")
+        .change(function () {
+        let $input = $(this);
+        console.log(this)
+        $('p').html(`.attr('checked' ): 
+        <strong> ${$input.attr("checked")} </strong><br>
+        .prop( 'checked' ): 
+        <strong> ${$input.prop("checked")} </strong><br>`);
+        })
+        });
+        </script>
+        </head>
+    <body>
+            <input id="check1" type="checkbox" checked="checked">
+            <label for="check1">Check me</label>
+        <p></p>
+    </body>
+</html>
