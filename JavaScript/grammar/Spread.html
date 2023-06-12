@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = ['a','b','c','d'];
+
+        const spread = (...arr) =>{
+            console.log(`length : ${arr.length}`)
+            for(index in arr){
+                console.log(`index = ${index} , value = ${arr[index]} `)
+            }
+        }
+
+        spread(...arr);
+
+        const arr2 = [11,24,52,31];
+        const arr3 = [45,78];
+
+        arr2.push(...arr3)
+        console.log(arr2)
+        
+
+        arr2.forEach(( 값 , index) => {
+            console.log(`${index} : ${값}`)
+        });
+        
+        // console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+        
+        arr2.forEach((value , index) =>{
+            arr2.push(value*2)
+            // arr2.shift()
+            // console.log(`${index+1} : ${value}`)
+        })
+        for(let i =0; i<5; i++){
+            arr2.shift()
+        }
+        console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ오름차순ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
+
+
+        arr2.sort((a,b) => a-b)
+        arr2.forEach((i,index) => {
+            console.log(`${index+1} : ${i}`)
+        });
+        
+        // arr2.forEach((value, index) => console.log(`${index+1} : ${value}`));
+
+
+        const obj = {firstName : "Ungmo", lastName : 'Lee'}
+        const {firstName,lastName} = obj;
+        console.log(`${firstName}  ${lastName}`)
+        
+
+    </script>
+</body>
+</html>
