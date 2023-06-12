@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        /* val()은 양식(form)의 값을 가져오거나 값을 설정하는 메소드이다.
+        *
+        */
+
+        //문법 1
+        // let in1 = $('input#inp').val();
+        // console.log(`${in1}`)
+
+        //문법 2
+        // $("input#input").val('ABCDE');
+
+        $(document).ready(function(){
+            $("button#InputButton").click(function(){
+                let con = $('input#inp').val()
+                alert(con);
+            })
+        })
+
+        
+
+    </script>
+</head>
+<body>
+    <body>
+		<p><input type="text" id="inp" value="초기값"> <button id="InputButton">Click</button></p>
+	</body>
+</body>
+</html>
