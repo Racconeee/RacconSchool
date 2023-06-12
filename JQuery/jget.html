@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+    <ul>
+        <li>lorem</li>
+        <li>Ipsum</li>
+    </ul>
+    <div></div>
+    <script></script>
+    <script>
+        //get() 선택한 요소를 배열(Array) 로 변환
+        /*  $(선택자).get(); 모든 요소 검색
+         *   $(선택자).get(index) index에 해당하는 요소 검색
+        */
+       $(document).ready(function(){
+        let con = $('li').get();
+        for(let i =0; i<con.length; i++){
+            console.log(con)
+            $('div').append('<p>' + con[i].innerHTML + '</p>' );
+        }
+       })
+    </script>
+</body>
+</html>
