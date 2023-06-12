@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><b>Values: </b></p>
+    <form>
+    <input type="text" name="name" value="John">
+    <input type="text" name="password" value="password">
+    <input type="text" name="url" value="https://johnresig.com/">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        //배열 관리 Jquery 배열은 선택자로 여러 개의 문서 객체를 선택할 때 생성
+        //배열을 관리할 때는 each()메소드를 사용한다.
+        //두가지 형태로 할 수 있다.
+        //$.each(object, function(index,item){})
+        // js배열의 각 원소를 접근하거나 객체의 각 속성을 접근할 때 사용한다.
+        // 매개변수 object : 배열 객체 , function : 원소를 처리하는 함수
+
+        //$(selector).each(fuction(index, item){})
+        // selector로 선택된 모든 문서 객체의 각각을 접근할 때 사용
+
+
+
+        $( "p" ).append( $( "input" ).map(function() { return $( this ).val();})
+        .get()
+        .join( ", " ) );
+
+    </script>
+</body>
+</html>
