@@ -18,6 +18,7 @@ class Student{
 
 public class Map_Ex {
     public static void main(String[] args) {
+        //Map interface HashMap클래스로 구현
         Map<String,Student> st = new HashMap<>();
 
         st.put("2005",new Student(9125, "금잔디"));
