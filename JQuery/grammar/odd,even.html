@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+
+        //odd(),even()을 통해 홀수와 짝수 구분 
+        //textcontent 속성은 요소의 텍스트 내용에 액세스하거나 수정하는데 사용함
+        //아래에서는 원래 있던 콘텐트 + "소개" 를 추가함 
+        //eq(index) index번째 요소 선택하기
+        $(function(){
+            $(".hallym").css("width","200px")
+            $(".hallym").odd().css("background","gray")
+            $(".hallym").even().css("background","yellow")
+            $(".hallym").eq(4).css("color","red")
+           
+            $(".hallym").each(function(){
+                $(this).html(`${this.textContent} 소개`)
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>jQuery selector 사용하기</h2>
+    <h4 class="hallym">css3</h4>
+    <h4 class="hallym">html</h4>
+    <h4 class="hallym">JavaScript</h4>
+    <h4 class="hallym">TypeScript</h4>
+    <h4 class="hallym">jQuery</h4>
+    </body>
+</html>
