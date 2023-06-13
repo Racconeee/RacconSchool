@@ -5,7 +5,8 @@ import java.util.TreeSet;
 
 public class set_Ex {
     public static void main(String[] args) {
-        HashSet<String> set1 = new HashSet<>();
+        //Set interface HashSet으로 구현
+        Set<String> set1 = new HashSet<>();
         LinkedHashSet<String> set2 = new LinkedHashSet<String>();
         TreeSet<String> set3 = new TreeSet<>();
         Set<String> set0 = new HashSet<String>();
