@@ -4,6 +4,7 @@ import java.util.Queue;
 
 public class Queue_Ex {
     public static void main(String[] args) {
+        //Queue - interface LinkedList-class
         int time = 10;
         Queue<Integer> q1 = new LinkedList<Integer>();
 
