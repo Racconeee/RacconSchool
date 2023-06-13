@@ -5,50 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <style>
-        .title {
-        color: brown;
-        text-decoration: underline;
-        margin: 0;
-        }
-        div{
-        width: 300px;
-        box-sizing :border-box;
-        }
-        .box1 {
-        border: 1px dashed darkgoldenrod;
-        background-color: wheat;
-        color: coral;
-        font-size: 1.2em;
-        padding: 15px 15px;
-        }
-        .box2 {
-        margin-top: 30px;
-        height: 70px;
-        color: crimson;
-        border : 1px double lightcoral;
-        }
-        </style>
-        <body>
-        <div>
-        <h3> 물품 선택</h3>
-        <form>
-        <input type="checkbox" value="3000"><span>CD</span><br>
-        <input type="checkbox" value="5000"><span>DVD</span><br>
-        <input type="checkbox" value="6000"><span>Book</span><br>
-        <input type="checkbox" value="4000"><span>usb</span><br>
-        </form>
-        </div>
-        <div>
-        <span>이곳에 총 구매 금액이 출력됩니다.</span>
-        </div>
-        <script>
-            $(function(){
-                let total
-                $("input:checkbox").on("click",function(){
-                    $("span").text("")
+</head>
+<body>
+    <h1>school</h1>
+    <ul>
+    <li class="red">hallym</li>
+    <li class="red">info data</li>
+    <li class="blue">software</li>
+    <li class="red">big data</li>
+    <li class="blue">smart IoT</li>
+    <li class="red">contentIT</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("li").on("click",function(){
+                let li_tag = $(this);
+
+                let redcard = li_tag.is(function(){
+                    return li_tag.attr('class') == "red"
                 })
+
+                if(redcard){
+                    li_tag.text("짱구").css("color","green").attr("class","blue")
+                }else{
+                    
+                    li_tag.text("철수").css("color","blue").attr("class","red")
+                }
+                console.log(redcard)
             })
-        </script>
-        </body>
+        })
+    </script>
+</body>
 </html>

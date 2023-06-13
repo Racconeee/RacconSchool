@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<style>
+    a{
+    text-decoration: none;
+    }
+    img {
+    width: 100px;
+    height: auto;
+    }
+    div{
+    margin: 10px 2px;
+    }
+    hr{
+    border : 1px solid gray;
+    width :70%;
+    margin: 0;
+    }
+    </style>
+<body>
+    
+    <div class="box1">
+    <a href="#">클릭하세요</a>
+    <br>
+    <img src="chicken1.png" alt="">
+    </div>
+    <hr>
+    <div class="box2">
+    <h2>이미지</h2>
+    <select id="imglist">
+    <option value="chicken1.png">flower1</option>
+    <option value="chicken2.png">flower2</option>
+    <option value="chicken3.png">flower3</option>
+    </select>
+    <h2>URL</h2>
+    <input type="radio" name="url" value="naver.com">naver<br>
+    <input type="radio" name="url" value="daum.com">daum<br>
+    <input type="radio" name="url" value="hallym.ac.kr">hallym
+    </div>
+    <hr>
+    <div class="choice">
+    <button>apply</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('button').on("click",function(){
+                let source = $('input:checked').val();
+                $('a').attr("href","https://"+source)
+                $('a').text(source)
+                $('img').attr('src',$('option:selected').val())
+                console.log(source)
+            })
+        })
+    </script>
+    </body>
+</html>

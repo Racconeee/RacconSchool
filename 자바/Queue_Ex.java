@@ -1,10 +1,12 @@
 package Collection;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class Queue_Ex {
     public static void main(String[] args) {
+        //Queue를 LinkedList로 구현
         int time = 10;
         Queue<Integer> q1 = new LinkedList<Integer>();
 
