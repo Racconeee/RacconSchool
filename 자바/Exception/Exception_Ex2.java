@@ -1,7 +1,7 @@
 //아래예제는 형변환에 대한 예제이다.
 //BankAccount에 객체를 생성해야 되는데 SavingsAccount에 객체를 생성해서 
 // 형변환을 하려고 하는데 다운캐스팅때문에 안되는 모습을 보이고 있다.
-
+// 
 class SavingsAccount{
     int money;
     public void deposit(int money){

@@ -1,0 +1,24 @@
+class Account {
+    constructor(people) {
+    this.people = people;
+    }
+   
+    get wallet__() {
+    return this.wallet;
+    }
+   
+    set tel(value) {
+    this.tel_number = value;
+    }
+   
+    deposit(amount) {
+        document.write(`잔액 부족 : ${amount - this.wallet}<br>`);
+    }
+   
+    display() {
+    document.write(`예금주 : ${this.people}<br>`);
+    }
+   }
+   let acc1 = new Account('스크립트', 50000, '010-8765-1386');
+   acc1.display();
+   document.write(`<br>변경 전 연락처 ${acc1.tel}`);

@@ -20,6 +20,11 @@
         $(document).ready(function(){
             $("li").on("click",function(){
                 let li_tag = $(this);
+                function defaultPara(a, b=20, c=30){
+                return a+b+c;
+                }
+                sum=defaultPara(3, 6);
+                console.log(sum)
 
                 let redcard = li_tag.is(function(){
                     return li_tag.attr('class') == "red"
