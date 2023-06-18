@@ -4,6 +4,9 @@ interface Backend { // 백엔드 인스턴스 생성
 }
 
 class Frontend {
+  public int ram = 16;
+  private int ram1 = 8;
+
 
   public void responsive(String str) { // Frontend 클래스의 메소드
     System.out.println(str + " can also be used as frontend.");
@@ -25,6 +28,7 @@ public class Demo2 {
     Language java = new Language(); // Language클래스를 인스턴스화 해서 java 객체를 만들어주었다.
     java.connectServer();
     java.responsive(java.language);
+    System.out.println(java.ram1);
   }
 
 }

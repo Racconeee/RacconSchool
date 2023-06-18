@@ -1,4 +1,5 @@
 interface AnimalEat {
+    
     void eat();
 }
 
@@ -7,6 +8,8 @@ interface AnimalTravel {
 }
 
 class Animal implements AnimalEat, AnimalTravel {
+    private String feed = "사료";
+    public String feed1 = "고기";
     public void eat() {
         System.out.println("Animal is eating");
     }
@@ -21,5 +24,6 @@ public class Demo {
         Animal a = new Animal();
         a.eat();
         a.travel();
+        System.out.println(a.feed1);
     }
 }
